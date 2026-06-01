@@ -1,0 +1,31 @@
+@font-face {
+    font-family: BigBlue;
+    src: url(Font/BigBlue_Terminal_437TT.TTF);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.text-up {
+    position: relative;
+    top: -20px;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: red;
+}
