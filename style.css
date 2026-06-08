@@ -1,6 +1,6 @@
 @font-face {
-    font-family: BigBlue;
-    src: url(Font/BigBlue_Terminal_437TT.TTF);
+    font-family: "BigBlue";
+    src: url("Font/BigBlue_Terminal_437TT.TTF") format("truetype");
 }
 
 .menu {
@@ -9,9 +9,8 @@
     gap: 40px;
 }
 
-.text-up {
-    position: relative;
-    top: -20px;
+body {
+    line-height: 1.3;
 }
 
 a:link {
