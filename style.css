@@ -10,6 +10,14 @@ img {
     image-rendering: -webkit-optimize-contrast;
 }
 
+.container {
+    width: 700px;
+    height: 800px;
+    margin: auto;
+    border: 3px groove green;
+    margin-top: 20px;
+}
+
 .menu {
     display: flex;
     justify-content: center;
