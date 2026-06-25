@@ -9,9 +9,9 @@ async function updateCounter() {
     const data = await res.json();
 
     document.getElementById("counterValue").innerText =
-      `Wa wa wee wa, a whopping ${data.field1} times`;
+      `Wa wa wee wa: ${data.field1}`;
   } catch (err) {
-    console.log("FAILED:", err);
+    console.error("Failed:", err);
   }
 }
 
