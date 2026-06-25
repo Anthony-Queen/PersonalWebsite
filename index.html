@@ -1,7 +1,16 @@
 <!doctype html>
 <html lang="en-us" style="background-color: black; color: rgb(0, 255, 0)">
     <head>
-        <meta charset="utf-8" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="
+          default-src 'self';
+          script-src 'self';
+          style-src 'self' 'unsafe-inline';
+          connect-src 'self' https://api.thingspeak.com;
+          img-src 'self' data:;
+        "
+        />
         <title>Anthony's Website!</title>
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -118,23 +127,10 @@
                 <h4><a href="Blog/Main.html">Blog</a></h4>
             </section>
             <section class="right-border" id="counter">
-                <h3>Times I procrastinated this week:</h3>
+                <h3>Procrastination counter:</h3>
                 <p id="counterValue">Loading...</p>
             </section>
         </section>
-        <script>
-            async function updateCounter() {
-                const res = await fetch(
-                    "https://api.thingspeak.com/channels/3416860/fields/1/last.json",
-                );
-                const data = await res.json();
-
-                document.getElementById("counterValue").innerText =
-                    `Wa wa wee wa, a whopping ${data.field1} times`;
-            }
-
-            setInterval(updateCounter, 5000);
-            updateCounter();
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
