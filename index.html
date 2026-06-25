@@ -117,9 +117,24 @@
                 <h4><a href="Who.html">Who?</a></h4>
                 <h4><a href="Blog/Main.html">Blog</a></h4>
             </section>
-            <section class="right-border">
-                <h1>Lorem ipsum et dolores type shit</h1>
+            <section class="right-border" id="counter">
+                <h3>Times I procrastinated this week:</h3>
+                <p id="counterValue">Loading...</p>
             </section>
         </section>
+        <script>
+            async function updateCounter() {
+                const res = await fetch(
+                    "https://api.thingspeak.com/channels/3416860/fields/1/last.json",
+                );
+                const data = await res.json();
+
+                document.getElementById("counterValue").innerText =
+                    `Wa wa wee wa, a whopping ${data.field1} times`;
+            }
+
+            setInterval(updateCounter, 5000);
+            updateCounter();
+        </script>
     </body>
 </html>
