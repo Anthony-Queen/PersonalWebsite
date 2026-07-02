@@ -1,6 +1,6 @@
 # Anthony_Queen's Personal Website
 
-This project is my personal space on the web — designed to look like a retro hacker-ish terminal interface.
+This project is my personal space on the web. It was designed to look like a retro hacker-ish terminal interface.
 It's a website built with a terminal-inspired aesthetic, featuring a green-on-black hacker theme and a BigBlueTerminal font (literally my favourite font).
 
 Featuring:
